@@ -1,0 +1,33 @@
+<div
+    class="d-flex align-items-center justify-content-center text-center w-100 h-100"
+>
+    <div class="card text-center">
+        <div class="card-header">
+            Candidate Registration
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="mb-3">
+                    <label for="candidate-name" class="form-label">Name</label>
+                    <input class="form-control" id="candidate-name"/>
+                </div>
+                <div class="mb-3">
+                    <label for="candidate-details" class="form-label"/>Details</label>
+                    <input class="form-control" id="candidate-details"/>
+                </div>
+                <div class="mb-3">
+                    <label for="candidate-election" class="form-label"/>Election</label>
+                    <input class="form-control" id="candidate-election"/>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            {{!-- Breaks the alignment if removed don't know why --}}
+            <a href="#" class="btn btn-primary" hidden>Go somewhere</a> 
+        </div>
+    </div>
+</div>
+
+{{#section 'script'}}
+    <script src="/assets/js/core/candidate_registration.js" type="module"></script>
+{{/section}}

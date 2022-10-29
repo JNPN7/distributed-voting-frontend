@@ -1,0 +1,33 @@
+<div
+    class="d-flex align-items-center justify-content-center text-center w-100 h-100"
+>
+    <div class="card text-center">
+        <div class="card-header">
+            Create Election
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="mb-3">
+                    <label for="election-name" class="form-label">Election</label>
+                    <input class="form-control" id="election-name"/>
+                </div>
+                <div class="mb-3">
+                    <label for="election-details" class="form-label"/>Details</label>
+                    <input class="form-control" id="election-details"/>
+                </div>
+                <div class="mb-3">
+                    <label for="election-position" class="form-label"/>Postion</label>
+                    <input class="form-control" id="election-position"/>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            {{!-- Breaks the alignment if removed don't know why --}}
+            <a href="#" class="btn btn-primary" hidden>Go somewhere</a> 
+        </div>
+    </div>
+</div>
+
+{{#section 'script'}}
+    <script src="/assets/js/core/admin/create_election.js" type="module"></script>
+{{/section}}
