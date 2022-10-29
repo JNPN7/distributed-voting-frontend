@@ -8,6 +8,7 @@ const create_election = (req, res) => {
     res.render("pages/admin/create_election", {title: "Admin", isAdmin: true, cur: "create_election"});
 }
 
+
 module.exports = {
     dashboard,
     create_position,
