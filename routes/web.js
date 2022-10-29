@@ -14,5 +14,8 @@ router.get("/candidate-registration", controller.candidate_registration);
 router.get("/admin", adminController.dashboard);
 router.get("/admin/create-position", adminController.create_position);
 router.get("/admin/create-election", adminController.create_election);
+router.get("/admin/candidates", adminController.candidates);
+router.get("/admin/election-details", adminController.election_details);
+router.get("/admin/voters", adminController.voters);
 
 module.exports = router;

@@ -68,7 +68,7 @@ async function getAllCandidates() {
 
     allCandidatesName.forEach((position) => {
         var li = document.createElement("li");
-        li.innerHTML = position[''];
+        li.innerHTML = position;
         li.classList.add("list-group-item");
         candidates.appendChild(li);
     });
