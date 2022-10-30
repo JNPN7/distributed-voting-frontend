@@ -13,6 +13,9 @@ const candidates = (req, res) => {
 const election_details = (req, res) => {
     res.render("pages/admin/election_details", {title: "Admin", isAdmin: true, cur: "election_details"})
 }
+const position_details = (req, res) => {
+    res.render("pages/admin/position_details", {title: "Admin", isAdmin: true, cur: "position_details"})
+}
 const voters = (req, res) => {
     res.render("pages/admin/voters", {title: "Admin", isAdmin: true, cur: "voters"})
 }
@@ -23,5 +26,6 @@ module.exports = {
     create_election,
     candidates,
     election_details,
+    position_details,
     voters
 }

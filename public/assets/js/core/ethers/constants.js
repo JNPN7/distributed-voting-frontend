@@ -1,4 +1,4 @@
-export const contractAddress = "0x6c8639F37F72b170D5DfeBA146EfC10Ae2Cc4ebB";
+export const contractAddress = "0x9257627D8eECa8fa46E4339EF66E26221772453e";
 export const abi = [
     {
         inputs: [],
@@ -54,19 +54,6 @@ export const abi = [
         inputs: [],
         name: "VotingNew__UnverifiedCandidate",
         type: "error",
-    },
-    {
-        inputs: [
-            {
-                internalType: "address",
-                name: "_address",
-                type: "address",
-            },
-        ],
-        name: "addAdmin",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
     },
     {
         inputs: [
@@ -206,11 +193,29 @@ export const abi = [
     },
     {
         inputs: [],
-        name: "getAllPostions",
+        name: "getAllPositions",
         outputs: [
             {
                 internalType: "string[]",
                 name: "",
+                type: "string[]",
+            },
+        ],
+        stateMutability: "view",
+        type: "function",
+    },
+    {
+        inputs: [],
+        name: "getAllUnVerifiedCandidates",
+        outputs: [
+            {
+                internalType: "address[]",
+                name: "candidateAddress",
+                type: "address[]",
+            },
+            {
+                internalType: "string[]",
+                name: "candidateName",
                 type: "string[]",
             },
         ],
@@ -315,9 +320,9 @@ export const abi = [
                 type: "tuple[]",
             },
             {
-                internalType: "bool",
-                name: "exists",
-                type: "bool",
+                internalType: "bool[]",
+                name: "verified",
+                type: "bool[]",
             },
         ],
         stateMutability: "view",
@@ -350,30 +355,6 @@ export const abi = [
     {
         inputs: [
             {
-                internalType: "address",
-                name: "_address",
-                type: "address",
-            },
-            {
-                internalType: "string",
-                name: "election",
-                type: "string",
-            },
-        ],
-        name: "getIsCandidateVerified",
-        outputs: [
-            {
-                internalType: "bool",
-                name: "",
-                type: "bool",
-            },
-        ],
-        stateMutability: "view",
-        type: "function",
-    },
-    {
-        inputs: [
-            {
                 internalType: "string",
                 name: "name",
                 type: "string",
@@ -395,6 +376,97 @@ export const abi = [
                 internalType: "bool",
                 name: "exists",
                 type: "bool",
+            },
+        ],
+        stateMutability: "view",
+        type: "function",
+    },
+    {
+        inputs: [],
+        name: "getUnVerifiedVoters",
+        outputs: [
+            {
+                internalType: "address[]",
+                name: "unVerifiedVoters",
+                type: "address[]",
+            },
+        ],
+        stateMutability: "view",
+        type: "function",
+    },
+    {
+        inputs: [
+            {
+                internalType: "string",
+                name: "election",
+                type: "string",
+            },
+        ],
+        name: "getVerifiedCandidatesOfElection",
+        outputs: [
+            {
+                internalType: "address[]",
+                name: "candidatesAddress",
+                type: "address[]",
+            },
+            {
+                internalType: "string[]",
+                name: "candidateName",
+                type: "string[]",
+            },
+        ],
+        stateMutability: "view",
+        type: "function",
+    },
+    {
+        inputs: [],
+        name: "getVerifiedVoters",
+        outputs: [
+            {
+                internalType: "address[]",
+                name: "verifiedVoters",
+                type: "address[]",
+            },
+        ],
+        stateMutability: "view",
+        type: "function",
+    },
+    {
+        inputs: [
+            {
+                internalType: "address",
+                name: "_address",
+                type: "address",
+            },
+        ],
+        name: "getVoter",
+        outputs: [
+            {
+                components: [
+                    {
+                        internalType: "address",
+                        name: "_address",
+                        type: "address",
+                    },
+                    {
+                        internalType: "string",
+                        name: "name",
+                        type: "string",
+                    },
+                    {
+                        internalType: "bool",
+                        name: "exists",
+                        type: "bool",
+                    },
+                    {
+                        internalType: "bool",
+                        name: "verified",
+                        type: "bool",
+                    },
+                ],
+                internalType: "struct VotingNew.Voter",
+                name: "",
+                type: "tuple",
             },
         ],
         stateMutability: "view",

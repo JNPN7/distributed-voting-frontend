@@ -1,0 +1,54 @@
+<div class="p-3 d-flex flex-column">
+    <div class="p-2">
+        <h5>UnVerified Candidate</h5>
+        <ul class="list-group" id="unverified-candidate">
+        </ul>
+    </div>
+
+    <div id="candidate-election">
+        <div class="p-2">
+            <h3>Elections</h3>
+            <ul class="list-group" id="verified-candidates">
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div
+    class="modal fade"
+    id="candidate"
+    tabindex="-1"
+    aria-labelledby="candidateLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="candidate-label">Modal title</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex"><p class="pe-2"> Name: </p><p class="text-dark" id="candidate-name">  Test </p></div>
+                <div class="d-flex"><p class="pe-2"> Details: </p><p class="text-dark" id="candidate-details">  Test </p></div>
+                <div id="election">
+                    {{!-- <div class="d-flex justify-content-between">
+                        <div class="d-flex"><p class="pe-2">Election:</p><p class="text-dark">Naboo</p></div>
+                        <button class="btn btn-success">Verify</button>
+                    </div> --}}
+                </div>
+            </div>
+            <div class="modal-footer" id="candidate-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#section "script"}}
+    <script src="/assets/js/core/admin/candidates.js" type="module"></script>
+{{/section}}

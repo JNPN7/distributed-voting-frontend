@@ -25,9 +25,13 @@
                 <li {{#if (eq cur "election_details")}} class='active' {{/if}}>
                     <a href="/admin/election-details">Election Details</a>
                 </li>
+                <li {{#if (eq cur "position_details")}} class='active' {{/if}}>
+                    <a href="/admin/position-details">Position Details</a>
+                </li>
             </ul>
             
         {{else}}
+        
             <ul class="list-unstyled components">
                 <p>User Address</p>
                 <li {{#if (eq cur "home")}} class='active' {{/if}}>

@@ -1,0 +1,46 @@
+<div class="p-3 d-flex flex-column">
+    <div class="p-2">
+        <h5>UnVerified Voters</h5>
+        <ul class="list-group" id="unverified-voters">
+        </ul>
+    </div>
+
+    <div class="p-2">
+        <h5>Verified Voters</h5>
+        <ul class="list-group" id="verified-voters">
+        </ul>
+    </div>
+</div>
+
+<!-- Modal -->
+<div
+    class="modal fade"
+    id="voter"
+    tabindex="-1"
+    aria-labelledby="voterLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="voter-label">Modal title</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex"><p class="pe-2"> Name: </p><p class="text-dark" id="voter-name">  Test </p></div>
+                <div class="d-flex"><p class="pe-2"> Verified: </p><p class="text-dark" id="voter-verified">  Test </p></div>
+            </div>
+            <div class="modal-footer" id="voter-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#section "script"}}
+    <script src="/assets/js/core/admin/voters.js" type="module"></script>
+{{/section}}

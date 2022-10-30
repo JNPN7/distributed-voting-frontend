@@ -16,8 +16,7 @@ async function getAllPositions() {
     const signer = provider.getSigner();
     const contract = new ethers.Contract(contractAddress, abi, signer);
 
-    // TODO! change getAllPosition
-    var allPositions = await contract.getAllPostions();
+    var allPositions = await contract.getAllPositions();
     if (allPositions.length == 0) {
         var p = document.createElement("p");
         p.innerHTML = "Is empty";
