@@ -1,8 +1,14 @@
 const home = (req, res) => {
     res.render("pages/home", {title: "Home", cur: "home"});
 }
-const pre_analysis = (req, res) => {
-    res.render("pages/pre_analysis", {title: "Pre-Analysis", cur: "pre_analysis"})
+const election_details = (req, res) => {
+    res.render("pages/election_details", {title: "Pre-Analysis", cur: "election_details"})
+}
+const position_details = (req, res) => {
+    res.render("pages/position_details", {title: "Admin", cur: "position_details"})
+}
+const candidates = (req, res) => {
+    res.render("pages/candidates", {title: "Admin",  cur: "candidates"})
 }
 const vote = (req, res) => {
     res.render("pages/vote", {title: "Vote", cur: "vote"})
@@ -19,7 +25,9 @@ const candidate_registration = (req, res) => {
 
 module.exports= {
     home,
-    pre_analysis,
+    election_details,
+    position_details,
+    candidates,
     vote,
     voting_registration,
     live_results,

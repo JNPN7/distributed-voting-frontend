@@ -4,11 +4,13 @@ const adminController = require("../controllers/adminController");
 const router = express.Router();
 
 router.get("/", controller.home);
-router.get("/pre-analysis", controller.pre_analysis);
 router.get("/vote", controller.vote);
 router.get("/voting-registration", controller.voting_registration);
 router.get("/live-results", controller.live_results);
 router.get("/candidate-registration", controller.candidate_registration);
+router.get("/candidates", controller.candidates);
+router.get("/election-details", controller.election_details);
+router.get("/position-details", controller.position_details);
 
 ///////////////// Admin //////////////////
 router.get("/admin", adminController.dashboard);

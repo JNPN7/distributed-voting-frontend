@@ -1,5 +1,5 @@
-import { ethers } from "../ethers/ethers-5.1.esm.min.js";
-import { contractAddress, abi } from "../ethers/constants.js";
+import { ethers } from "./ethers/ethers-5.1.esm.min.js";
+import { contractAddress, abi } from "./ethers/constants.js";
 
 const unVerifiedCandidate = document.querySelector("#unverified-candidate");
 const candidateElection = document.querySelector("#candidate-election");
@@ -48,9 +48,11 @@ async function getCandiateWithElection() {
         elec_name.innerHTML = election;
         elec.appendChild(elec_name);
         candidateElection.appendChild(elec);
-        
-        var candidates = await contract.getVerifiedCandidatesOfElection(election);
-        console.log(candidates)
+
+        var candidates = await contract.getVerifiedCandidatesOfElection(
+            election
+        );
+        console.log(candidates);
         var candidateName = candidates["candidateName"];
         var candidateAddress = candidates["candidatesAddress"];
         for (let i = 0; i < candidateName.length; i++) {
@@ -71,7 +73,7 @@ async function getCandiateWithElection() {
 }
 
 async function updateModal(_address) {
-    document.querySelectorAll('.elec').forEach((elem) => elem.remove())
+    document.querySelectorAll(".elec").forEach((elem) => elem.remove());
 
     modalTitle.innerHTML = _address;
     modalCandidateName.innerHTML = "...";
@@ -84,7 +86,12 @@ async function updateModal(_address) {
     var elections = candidateInfo["election"];
     for (let i = 0; i < elections.length; i++) {
         var parentDiv = document.createElement("div");
-        parentDiv.classList.add("d-flex", "pb-1", "justify-content-between", "elec");
+        parentDiv.classList.add(
+            "d-flex",
+            "pb-1",
+            "justify-content-between",
+            "elec"
+        );
 
         var electionText = document.createElement("div");
         electionText.classList.add("d-flex");

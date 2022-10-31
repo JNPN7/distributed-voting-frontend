@@ -1,5 +1,5 @@
-import { ethers } from "../ethers/ethers-5.1.esm.min.js";
-import { contractAddress, abi } from "../ethers/constants.js";
+import { ethers } from "./ethers/ethers-5.1.esm.min.js";
+import { contractAddress, abi } from "./ethers/constants.js";
 
 const positions = document.querySelector("#positions");
 
